@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Created by wfnuser on 2017/8/4.
  */
-public class BPlusTree implements BTree {
+public class BTreeImpl implements BTree {
 
     // Root node
     protected Node root;
@@ -52,7 +52,7 @@ public class BPlusTree implements BTree {
 
     }
 
-    public BPlusTree(int order) {
+    public BTreeImpl(int order) {
         if (order < 3) {
             System.out.println("Order must be greater than 2");
             System.exit(0);
@@ -64,7 +64,7 @@ public class BPlusTree implements BTree {
 
     // Test
     public void main(String[] args) {
-        BPlusTree bt = new BPlusTree(4);
+        BTreeImpl bt = new BTreeImpl(4);
         Random random = new Random();
         long current = System.currentTimeMillis();
         for (int j = 0; j < 10000; j++) {
